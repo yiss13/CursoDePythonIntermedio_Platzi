@@ -12,8 +12,46 @@ se crea un entorno virtual con el modulo venv e instalar dependencias con el mod
 *pip install -r requirements.txt: instala los modulos con las versiones que están en ese archivo
 *for key, value in superDict.items(): items es un método que permite recorrer la llave y el valor de un diccionario
     print(key, "-", value)
+*for i in range(1, 101): con este ciclo lleno diccionarios
+     if i % 3 != 0:
+         myDict[i] = i ** 3
+* | une un diccionario con otro
+*num.isnumeric(): isnumeric es un método que verifica si la cadena de caracteres es parecida a un número
 
+list comprehensions
+nameList = [element for element in iterable if condition]: para cada elemento en el iterable ese elemento sólo si se cumple la condición
+nameDict = {key:value for value in iterable if condition}: de la misma manera agrego elementos a los diccionarios
 
+funciones anónimas lambda
+deben tener una línea de código
+*lambda argumentos: expresión  ejemplo: palindrome = lambda string: string == string[::-1]
+
+funciones de orden superior (High order functions)
+funcion que recibe como parámetro otra función
+hay tres funciones de orden superior muy importantes: filter, map y reduce
+*filter se tiene un ciclo y una condición
+odd = list(filter(lambda x: x % 2 != 0, myList)): se tienen dos parámetros: lambda que recibe cada uno de los iterables que están en la lista y myList que es una lista iterable
+*map se tiene sólo un ciclo
+squares = list(map(lambda x: x ** 2, myList))
+*reduce 
+allMultiplied = reduce(lambda a, b: a * b, myList)
+
+los errores en el código
+Hay dos tipos de error: cuando python avisa y cuando no
+Cuando python avisa
+*SintaxError: no corre ninguna línea del código
+*Exception: no corre sólo la línea de ese código
+Cuando no avisa
+Debugging (depuración)
+
+Manejo de excepciones
+TRY: En el try se coloca código que esperamos que pueda lanzar algún error.
+EXCEPT: En el except se maneja el error, es decir, si ocurre un error dentro del bloque de código del try, se deja de ejecutar el código del try y se ejecuta lo que se haya definido en el Except.
+ELSE: El else se ejecuta sólo si no hubo ninguna excepción lanzada desde el try
+FINALLY: Se ejecuta SIEMPRE, haya sido lanzada la excepción o no haya sido lanzada.
+
+Assert statements
+assert condición, mensajedeerror: afirmo que esta condición es verdadera, sino imprime este mensaje de error
 
 
 
