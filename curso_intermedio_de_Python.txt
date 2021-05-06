@@ -53,7 +53,12 @@ FINALLY: Se ejecuta SIEMPRE, haya sido lanzada la excepción o no haya sido lanz
 Assert statements
 assert condición, mensajedeerror: afirmo que esta condición es verdadera, sino imprime este mensaje de error
 
+Modos de apertura
+R lectura
+W lectura (sobreescribir)
+A escritura (agregar al final)
 
+with open("./ruta/del/archivo.txt", "r") as f:
 
 
 
